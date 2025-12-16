@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm - Biti's Hunter</title>
+    <link rel="stylesheet" href="./assets/css/productDetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="product-detail-container">
+      <div class="product-gallery">
+        <div class="main-image-wrap">
+          <span class="badge-new">Mới</span>
+          <img
+            id="mainImage"
+            src="./assets/images/anh1.jpg"
+            alt="Giày Biti's chính"
+          />
+        </div>
+
+        <div class="thumbnail-list">
+          <img
+            class="thumb active"
+            src="./assets/images/anh1.jpg"
+            onclick="changeImage(this)"
+          />
+          <img
+            class="thumb"
+            src="./assets/images/anh2.jpg"
+            onclick="changeImage(this)"
+          />
+          <img
+            class="thumb"
+            src="./assets/images/anh3.jpg"
+            onclick="changeImage(this)"
+          />
+          <img
+            class="thumb"
+            src="./assets/images/anh4.jpg"
+            onclick="changeImage(this)"
+          />
+        </div>
+      </div>
+
+      <div class="product-info-col">
+        <h1 class="product-title">
+          Giày Tập Đi Biti's Bé Trẻ Em Màu Xanh Dương Lợt BSB000900XDL
+        </h1>
+        <div class="product-sku">
+          Mã sản phẩm: <strong>BSB000900XDL</strong>
+        </div>
+
+        <div class="product-price-box">
+          <span class="price-current">240,000 ₫</span>
+          <span class="product-status">Tình trạng: <span>Còn hàng</span></span>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="option-group">
+          <label>Màu sắc: <span id="colorName">Xanh Dương Lợt</span></label>
+          <div class="color-options">
+            <div
+              class="color-item active"
+              data-name="Xanh Dương Lợt"
+              data-img="./assets/images/anh1.jpg"
+              onclick="selectColor(this)"
+            >
+              <img
+                src="./assets/images/anh1.jpg"
+              />
+            </div>
+
+            <div
+              class="color-item"
+              data-name="Xanh Nhớt"
+              data-img="./assets/images/anh2.jpg"
+              onclick="selectColor(this)"
+            >
+              <img
+                src="./assets/images/anh2.jpg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <label
+            >Kích thước: <span class="guide-size">(Cách chọn size)</span></label
+          >
+          <div class="size-options">
+            <button class="size-btn" onclick="selectSize(this)">20</button>
+            <button class="size-btn active" onclick="selectSize(this)">
+              22
+            </button>
+            <button class="size-btn" onclick="selectSize(this)">24</button>
+          </div>
+        </div>
+
+        <div class="option-group quantity-group">
+          <label>Số lượng:</label>
+          <div class="quantity-control">
+            <button onclick="decreaseQty()">-</button>
+            <input type="number" id="qtyInput" value="1" min="1" />
+            <button onclick="increaseQty()">+</button>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-buy-now">MUA NGAY</button>
+          <button class="btn-add-cart">THÊM VÀO GIỎ</button>
+        </div>
+
+        <div class="wishlist-action">
+          <i class="fa-regular fa-heart"></i> Thêm vào yêu thích
+        </div>
+
+        <div class="policy-grid">
+          <div class="policy-item">
+            <img
+              src="https://theme.hstatic.net/1000230642/1000780462/14/product_policy_1.png"
+              alt="Icon"
+            />
+            <span>Cam kết chính hãng Biti's 100%</span>
+          </div>
+          <div class="policy-item">
+            <img
+              src="https://theme.hstatic.net/1000230642/1000780462/14/product_policy_2.png"
+              alt="Icon"
+            />
+            <span>Bảo hành 03 tháng (click xem chi tiết)</span>
+          </div>
+          <div class="policy-item">
+            <img
+              src="https://theme.hstatic.net/1000230642/1000780462/14/product_policy_3.png"
+              alt="Icon"
+            />
+            <span>Đổi size trong vòng 7 ngày</span>
+          </div>
+          <div class="policy-item">
+            <img
+              src="https://theme.hstatic.net/1000230642/1000780462/14/product_policy_4.png"
+              alt="Icon"
+            />
+            <span>Đổi trả hàng trong vòng 7 ngày</span>
+          </div>
+        </div>
+
+       <div class="product-description">
+    <h2 class="desc-main-title">Mô tả sản phẩm</h2>
+    
+    <div class="desc-content" id="descContent">
+        <h3 class="post-title">GIÀY THỂ THAO BITI'S TRẺ EM - XÁM/TRẮNG: SIÊU NHẸ, ÊM CHÂN VÀ THOÁNG KHÍ</h3>
+
+        <p class="desc-text">
+            Mẫu <strong>Giày Thể Thao Biti's Trẻ Em màu Xám/Trắng</strong> (giả định màu sắc) là lựa chọn tuyệt vời cho các bé nhỏ tuổi. 
+            Giày mang lại sự <strong>NHẸ, ÊM, MỀM MẠI</strong> và <strong>THOÁNG KHÍ</strong> tối đa, phù hợp cho mọi hoạt động chạy nhảy hàng ngày, đi học, đi chơi.
+        </p>
+
+        <h4 class="sub-title">ĐẶC ĐIỂM NỔI BẬT VÀ CẤU TẠO</h4>
+        <ul class="check-list">
+            <li><strong>Giá ưu đãi:</strong> 360.000 VNĐ.</li>
+            <li><strong>Kích thước:</strong> Phù hợp với bé nhỏ tuổi, size 24-29.</li>
+            <li><strong>Đế IP Siêu Nhẹ:</strong> Đế IP có độ đàn hồi cao, mang lại cảm giác NHẸ, ÊM CHÂN và vững chắc.</li>
+            <li><strong>Quai Lưới Xốp + Si Nubuck:</strong> Chất liệu quai bền bỉ, THOÁNG KHÍ, giúp bảo vệ chân bé và giữ giày luôn khô ráo.</li>
+            <li><strong>Thiết kế tiện dụng:</strong> Khóa dán/dây thun co giãn (giả định) giúp bé dễ dàng mang tháo.</li>
+        </ul>
+
+        <h4 class="sub-title">LỢI ÍCH KHI SỬ DỤNG</h4>
+        <ul class="check-list">
+            <li><strong>Thoải mái vận động:</strong> Đế IP nhẹ và êm, hỗ trợ tốt cho các hoạt động thể thao và chạy nhảy.</li>
+            <li><strong>Dễ mang:</strong> Khóa dán tiện lợi giúp bé tự mang giày nhanh chóng (Giả định).</li>
+            <li><strong>Thời trang và bền bỉ:</strong> Tông màu Xám/Trắng hiện đại, chất liệu quai bền, thích hợp cho bé mang đi học, đi chơi hàng ngày.</li>
+        </ul>
+
+        <p class="call-to-action">ĐẶT HÀNG NGAY ĐỂ BÉ YÊU SỞ HỮU ĐÔI GIÀY THỂ THAO XÁM TIỆN LỢI NÀY!</p>
+    </div>
+
+    <button class="btn-view-more" onclick="toggleDesc()">+ Xem thêm</button>
+</div>
+      </div>
+    </div>
+
+    <script src="./assets/js/productDetail.js"></script>
+  </body>
+</html>
