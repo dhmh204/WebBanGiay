@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán - Biti's Hunter</title>
+    <link rel="stylesheet" href="./assets/css/checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="checkout-container">
+      <div class="main-content">
+        <div class="checkout-header">
+          <h1 class="logo-text">BITI'S HUNTER</h1>
+          <ul class="breadcrumb">
+            <li><a href="cart.html">Giỏ hàng</a></li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            <li>Thông tin giao hàng</li>
+            <li><i class="fa-solid fa-angle-right"></i></li>
+            <li class="active">Phương thức thanh toán</li>
+          </ul>
+        </div>
+        <div class="section-group">
+          <h3 class="section-title">Thông tin giao hàng</h3>
+          <div class="form-row">
+            <div class="form-group full">
+              <input
+                type="text"
+                placeholder="Họ và tên"
+                class="input-control"
+              />
+            </div>
+          </div>
+          <div class="form-row two-col">
+            <div class="form-group">
+              <input type="email" placeholder="Email" class="input-control" />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                placeholder="Số điện thoại"
+                class="input-control"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <input
+                type="text"
+                placeholder="Địa chỉ (Số nhà, tên đường...)"
+                class="input-control"
+              />
+            </div>
+          </div>
+          <div class="form-row three-col">
+            <div class="form-group">
+              <select class="input-control" id="provinceSelect">
+                <option value="">Chọn Tỉnh/Thành</option>
+                <option value="HN">Hà Nội</option>
+                <option value="HCM">TP. Hồ Chí Minh</option>
+                <option value="DN">Đà Nẵng</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="input-control" id="districtSelect">
+                <option value="">Chọn Quận/Huyện</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="input-control">
+                <option value="">Chọn Phường/Xã</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <textarea
+                placeholder="Ghi chú (Tùy chọn)"
+                class="input-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="section-group">
+          <h3 class="section-title">Phương thức vận chuyển</h3>
+          <div class="shipping-method">
+            <div class="method-item">
+              <span class="radio-mark selected"
+                ><i class="fa-solid fa-circle-check"></i
+              ></span>
+              <span class="method-name">Giao hàng tiêu chuẩn</span>
+              <span class="method-price">Miễn phí</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-group">
+          <h3 class="section-title">Phương thức thanh toán</h3>
+          <div class="payment-methods">
+            <label class="payment-item active" onclick="selectPayment(this)">
+              <input type="radio" name="payment" checked />
+              <div class="payment-header">
+                <i class="fa-solid fa-money-bill-wave icon-payment"></i>
+                <span>Thanh toán khi nhận hàng (COD)</span>
+              </div>
+            </label>
+            <label class="payment-item" onclick="selectPayment(this)">
+              <input type="radio" name="payment" />
+              <div class="payment-header">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png"
+                  class="icon-img"
+                />
+                <span>Ví điện tử MoMo</span>
+              </div>
+            </label>
+            <label class="payment-item" onclick="selectPayment(this)">
+              <input type="radio" name="payment" />
+              <div class="payment-header">
+                <i class="fa-solid fa-building-columns icon-payment"></i>
+                <span>Chuyển khoản ngân hàng</span>
+              </div>
+              <div class="payment-desc">
+                Vui lòng chuyển khoản tới STK: 1903... (Techcombank)
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="checkout-actions">
+          <a href="cart.html" class="back-link">Quay lại giỏ hàng</a>
+          <button class="btn-complete">HOÀN TẤT ĐƠN HÀNG</button>
+        </div>
+      </div>
+      <div class="sidebar-summary">
+        <h3 class="summary-title">Đơn hàng (2 sản phẩm)</h3>
+        <div class="product-list-summary">
+          <div class="summary-item">
+            <div class="img-badge-wrap">
+              <img
+                src="https://product.hstatic.net/1000230642/product/bsb000900xdl__3__5f3e9700388349258287d35165913454_master.jpg"
+              />
+              <span class="qty-badge">1</span>
+            </div>
+            <div class="item-details">
+              <p class="name">Giày Tập Đi Biti's Bé Trai</p>
+              <p class="variant">Xanh Dương Lợt / 22</p>
+            </div>
+            <span class="price">240.000₫</span>
+          </div>
+          <div class="summary-item">
+            <div class="img-badge-wrap">
+              <img
+                src="https://product.hstatic.net/1000230642/product/dsmh10600xam__1__7d14068597394d1b84931969038e9389_master.jpg"
+              />
+              <span class="qty-badge">1</span>
+            </div>
+            <div class="item-details">
+              <p class="name">Biti's Hunter X Dune</p>
+              <p class="variant">Xám / 40</p>
+            </div>
+            <span class="price">1.128.000₫</span>
+          </div>
+        </div>
+        <div class="discount-box">
+          <input type="text" placeholder="Nhập mã giảm giá" />
+          <button>Áp dụng</button>
+        </div>
+        <div class="pricing-summary">
+          <div class="price-row">
+            <span>Tạm tính</span> <span>1.368.000₫</span>
+          </div>
+          <div class="price-row">
+            <span>Phí vận chuyển</span> <span>Miễn phí</span>
+          </div>
+          <div class="price-row total-row">
+            <span>Tổng cộng</span> <span class="total-price">1.368.000₫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/checkout.js"></script>
+  </body>
+</html>
+.

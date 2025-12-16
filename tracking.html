@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu đơn hàng - Biti's Hunter</title>
+    <link rel="stylesheet" href="./assets/css/tracking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="tracking-header">
+            <h2>TRA CỨU ĐƠN HÀNG</h2>
+            <p>Nhập mã đơn hàng và số điện thoại để theo dõi hành trình đơn hàng của bạn.</p>
+        </div>
+
+        <div class="tracking-search-box">
+            <div class="input-group">
+                <i class="fa-solid fa-receipt icon-input"></i>
+                <input type="text" id="orderId" placeholder="Mã đơn hàng (VD: #BITIS1234)">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-phone icon-input"></i>
+                <input type="text" id="phone" placeholder="Số điện thoại đặt hàng">
+            </div>
+            <button class="btn-track" onclick="trackOrder()">TRA CỨU NGAY</button>
+        </div>
+
+        <div class="tracking-result" id="resultSection" style="display: none;">
+            
+            <div class="order-progress">
+                <div class="progress-track"></div>
+                
+                <div class="step-item completed">
+                    <div class="step-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div class="step-text">Đơn hàng đã xác nhận</div>
+                    <div class="step-date">08:30 - 17/12</div>
+                </div>
+
+                <div class="step-item completed">
+                    <div class="step-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <div class="step-text">Đã đóng gói</div>
+                    <div class="step-date">14:20 - 17/12</div>
+                </div>
+
+                <div class="step-item active">
+                    <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="step-text">Đang vận chuyển</div>
+                    <div class="step-date">Hiện tại</div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-icon"><i class="fa-solid fa-house-circle-check"></i></div>
+                    <div class="step-text">Giao thành công</div>
+                    <div class="step-date">Dự kiến 19/12</div>
+                </div>
+            </div>
+
+            <div class="order-details-grid">
+                
+                <div class="detail-card">
+                    <h3>Thông tin nhận hàng</h3>
+                    <p><strong>Người nhận:</strong> Nguyễn Văn A</p>
+                    <p><strong>Điện thoại:</strong> 0987***123</p>
+                    <p><strong>Địa chỉ:</strong> 123 Đường Láng, Đống Đa, Hà Nội</p>
+                    <p><strong>Trạng thái:</strong> <span class="status-badge">Đang giao hàng</span></p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Sản phẩm</h3>
+                    <div class="item-mini">
+                        <span>x1 Giày Tập Đi Biti's Bé Trai (Xanh/22)</span>
+                        <span class="price">240.000₫</span>
+                    </div>
+                    <div class="item-mini">
+                        <span>x1 Biti's Hunter X Dune (Xám/40)</span>
+                        <span class="price">1.128.000₫</span>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="total-row">
+                        <strong>Tổng tiền:</strong>
+                        <strong class="total-price">1.368.000₫</strong>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn-back">Quay về trang chủ</a>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/tracking.js"></script>
+</body>
+</html>
